@@ -1,50 +1,15 @@
-/* Base styling */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  color: black;
-  transition: all 0.3s ease;
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
 }
 
-header, footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 20px;
+function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  const clock = document.getElementById("clock");
+  if (clock) {
+    clock.textContent = "Current Time: " + timeString;
+  }
 }
 
-main {
-  max-width: 700px;
-  margin: auto;
-  padding: 20px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  font-size: 1rem;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#form-status {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* Dark theme */
-.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode header, .dark-mode footer {
-  background-color: #1e1e1e;
-}
+setInterval(updateClock, 1000);
+updateClock();

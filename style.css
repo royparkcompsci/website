@@ -1,31 +1,70 @@
-function toggleTheme() {
-  document.body.classList.toggle("dark-mode");
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+  transition: 0.3s;
 }
 
-// Clock Function
-function updateClock() {
-  const now = new Date();
-  const timeString = now.toLocaleTimeString();
-  document.getElementById("clock").textContent = "Current Time: " + timeString;
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: #222;
+  padding: 10px;
+  justify-content: center;
 }
-setInterval(updateClock, 1000); // Update every second
-updateClock(); // Initial call
 
-// Contact Form Validation
-function validateForm() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const status = document.getElementById("form-status");
+nav ul li {
+  margin: 0 15px;
+}
 
-  if (!name || !email || !message) {
-    status.textContent = "Please fill in all fields.";
-    status.style.color = "red";
-    return false;
-  }
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  status.textContent = "Thanks for your message!";
-  status.style.color = "green";
-  document.querySelector("form").reset();
-  return false; // Prevent real submission
+header, footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode nav ul {
+  background-color: #000;
+}
+
+.dark-mode nav ul li a {
+  color: #f5f5f5;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #eee;
 }
