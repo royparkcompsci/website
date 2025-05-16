@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My First Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <button onclick="changeText()">Click Me!</button>
-  <p id="demo">This is a demo text.</p>
+  <header>
+    <h1>i love my girlfriend</h1>
+    <p>Welcome to my homepage!</p>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I am learning how to build websites using HTML, CSS, and JavaScript!</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
