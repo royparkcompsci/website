@@ -3,11 +3,10 @@ function toggleTheme() {
 }
 
 function updateClock() {
-  const now = new Date();
-  const timeString = now.toLocaleTimeString();
   const clock = document.getElementById("clock");
   if (clock) {
-    clock.textContent = "Current Time: " + timeString;
+    const now = new Date();
+    clock.textContent = "Current Time: " + now.toLocaleTimeString();
   }
 }
 
