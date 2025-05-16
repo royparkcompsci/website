@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roy's Homepage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>i love my girlfriend</h1>
-    <p>Welcome to my homepage!</p>
-    <button onclick="toggleTheme()">Toggle Theme</button>
+    <h1>Welcome to Roy's Website</h1>
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    <p id="clock">Loading time...</p>
   </header>
 
   <main>
-    <section class="about">
+    <section class="bio">
       <h2>About Me</h2>
-      <p>I am learning how to build websites using HTML, CSS, and JavaScript!</p>
+      <p>Hello! I'm Roy. I'm building websites with HTML, CSS, and JavaScript!</p>
     </section>
 
     <section class="contact">
@@ -25,14 +25,14 @@
         <input type="text" id="name" placeholder="Your Name" required />
         <input type="email" id="email" placeholder="Your Email" required />
         <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
+        <button type="submit">Send Message</button>
       </form>
       <p id="form-status"></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; 2025 Roy Park</p>
   </footer>
 
   <script src="script.js"></script>
